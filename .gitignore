@@ -1,0 +1,13 @@
+# Don't track content of these folders
+Installed Packages/
+Package Control.cache/
+
+# Don't track content of these files
+CppBuilder.sublime-settings
+Package Control.last-run
+Package Control.merged-ca-bundle
+Package Control.sublime-settings
+Package Control.user-ca-bundle
+Preferences.sublime-settings
+SublimeLinter.sublime-settings
+
