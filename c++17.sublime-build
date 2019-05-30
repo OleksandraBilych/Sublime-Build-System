@@ -1,5 +1,5 @@
 {
-    "cmd": ["g++", "-Wall -std=c++17", "$file_name", "-o", "${file_path}/${file_base_name}"],
+    "cmd": ["g++", "--std=c++17", "$file_name", "-o", "${file_path}/${file_base_name}"],
     "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
     "working_dir": "${file_path}",
     "selector": "source.cpp",
@@ -7,19 +7,19 @@
     [
         {
             "name": "Run",
-            "cmd": ["g++ -std=c++17 $file_name -o $file_base_name && timeout 4s gnome-terminal ./$file_base_name"],
+            "cmd": ["g++ --std=c++17 $file_name -o $file_base_name && timeout 4s gnome-terminal ./$file_base_name"],
             "shell": true,
             "working_dir": "${file_path}",
         },
         {
             "name": "Run in terminal",
-            "cmd": ["g++ -std=c++17 $file_name -o $file_base_name && timeout 4s gnome-terminal -- /bin/bash -c './$file_base_name; read'"],
+            "cmd": ["g++ --std=c++17 $file_name -o $file_base_name && timeout 4s gnome-terminal -- /bin/bash -c './$file_base_name; read'"],
             "shell": true,
             "working_dir": "${file_path}",
         },
         {
             "name": "Run with input.in/output.in file",
-            "cmd": ["g++ -std=c++17 $file_name -o $file_base_name && timeout 4s ./$file_base_name<input.in>output.in && gedit output.in"],
+            "cmd": ["g++ --std=c++17 $file_name -o $file_base_name && timeout 4s ./$file_base_name<input.in>output.in && gedit output.in"],
             "shell": true,
             "working_dir": "${file_path}",
         }
